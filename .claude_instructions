@@ -1,0 +1,60 @@
+## Markdown Formatting Guidelines
+
+### Line Break Rules
+
+When generating or editing markdown files in this project:
+
+1. **ALWAYS use `<br>` tags for line breaks** within:
+   - List items (numbered or bulleted)
+   - Paragraphs that need explicit line breaks
+   - Table cells requiring multi-line content
+   - Any content where line breaks are semantically important
+
+2. **NEVER rely on**:
+   - Trailing double spaces for line breaks (fragile, invisible)
+   - Plain newlines within list items (may not render as breaks)
+   - Code blocks when proper markdown lists are more appropriate
+
+3. **Code Blocks vs. Lists**:
+   - Use **code blocks** (triple backticks) ONLY for:
+     - Actual code snippets
+     - Command-line examples
+     - Configuration files
+     - ASCII diagrams that must preserve exact spacing
+   - Use **markdown lists with `<br>` tags** for:
+     - Numbered steps or procedures
+     - Bullet points with sub-items
+     - Any structured content meant for reading (not code)
+
+### Examples
+
+**✅ CORRECT - Numbered list with line breaks:**
+```markdown
+1. **Step One**<br>→ Action item<br>→ Another action
+
+2. **Step Two**<br>→ Sub-item one<br>→ Sub-item two<br>   - Nested detail<br>   - Another nested detail
+```
+
+**❌ INCORRECT - Code block for non-code content:**
+```markdown
+```
+1. Step One
+   → Action item
+   → Another action
+```
+```
+
+**✅ CORRECT - Code block for actual code:**
+```markdown
+```bash
+./script.sh --option value
+cd directory/
+```
+```
+
+### Testing
+
+- Always preview markdown files after editing
+- Verify that line breaks appear where intended
+- Check that lists render with proper hierarchy
+- Ensure `<br>` tags create visible line breaks

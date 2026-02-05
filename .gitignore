@@ -1,0 +1,69 @@
+# Gitignore for Mobile Application Security Assessments
+# Keep the structure of the repository but ignore large binary files and sensitive data.
+
+# APK directories - keep structure, exclude APK files
+apk/*
+!apk/
+!apk/.gitkeep
+
+# Assessment artifacts (can be large)
+decompiled/*
+!decompiled/
+!decompiled/.gitkeep
+
+assessments/*/apk/*.apk
+assessments/*/apk/*.ipa
+assessments/*/apk/*.xapk
+*.dex
+*.so
+*.odex
+
+# Build artifacts
+*.class
+*.jar
+*.pyc
+__pycache__/
+.DS_Store
+*.log
+*.swp
+*.swo
+*~
+
+# Sensitive data
+*credentials*.txt
+*secrets*.txt
+*api-keys*.txt
+*CONFIDENTIAL*
+*-internal-*
+
+# Editor files
+.vscode/
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# Python virtual environment
+venv/
+env/
+.Python
+
+# Reports (optionally gitignore if sensitive)
+# assessment-reports/*-FINAL.md
+# assessment-reports/*-APPROVED.pdf
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.cache
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Archives
+*.zip
+*.tar.gz
+*.tgz

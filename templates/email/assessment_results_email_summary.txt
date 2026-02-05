@@ -1,0 +1,68 @@
+SUBJECT: Security Assessment Results for [MOBILE APP NAME]
+
+Dear [RECIPIENT NAME],
+
+Thank you for allowing us to assess [MOBILE APP NAME] for security vulnerabilities. We've completed our review and would like to share our findings with you.
+
+ASSESSMENT OVERVIEW
+
+With your permission, our team:
+• Downloaded the [MOBILE APP NAME] app
+• Examined the application using industry-standard tools
+• Evaluated adherence to OWASP Mobile Application Security Verification Standards (MASVS), focusing on RESILIENCE controls
+
+KEY OBSERVATIONS
+
+While your application demonstrates some understanding of security recommendations for publicly available applications, you of course need to contend with security limitations that are native to Android as well as the lack of advanced anti-tamper features in native OS tools.
+
+Our assessment identified several areas where enhancement of your security posture is strongly considered to protect your users' privacy and reduce your org's exposure to [APPLICABLE INDUSTRY STANDARD(S)] violations. As things stand, [MOBILE APP NAME]:
+
+• MASVS-RESILIENCE-1 (Root/Jailbreak Detection): [FINDING SUMMARY - e.g., "While device fingerprinting is present via [SDK NAME], there is no enforcement mechanism. The app runs normally on rooted devices, allowing attackers to operate in a compromised environment where they can bypass security controls."]
+
+• MASVS-RESILIENCE-2 (Code Obfuscation): [FINDING SUMMARY - e.g., "The application has zero code obfuscation implemented. All [NUMBER] classes have fully readable names, making reverse engineering trivial and exposing business logic, authentication flows, and security mechanisms to attackers."]
+
+• MASVS-RESILIENCE-3 (Anti-Debugging): [FINDING SUMMARY - e.g., "No anti-debugging mechanisms are present. Attackers can freely attach debuggers or dynamic instrumentation tools like Frida to manipulate runtime behavior, bypass authentication, and extract sensitive data from memory."]
+
+• MASVS-RESILIENCE-4 (Tamper Detection): [FINDING SUMMARY - e.g., "No tamper detection or integrity verification exists. This allows attackers to modify the APK/IPA, remove security controls such as SSL pinning, inject malicious code, and redistribute trojanized versions of the app."]
+
+NEXT STEPS
+
+We welcome the opportunity to meet with you to discuss these findings in detail and explore how [YOUR COMPANY]'s Application Security solution can help you to mitigate the risks associated with these vulnerabilities.
+
+Would you be available for a brief meeting?
+
+Best regards,
+
+[YOUR NAME]
+[YOUR TITLE], [YOUR COMPANY]
+[YOUR EMAIL]
+[YOUR PHONE]
+
+---
+TEMPLATE USAGE NOTES (Remove this section before sending)
+
+PLACEHOLDERS TO REPLACE:
+• [MOBILE APP NAME] - The name of the assessed application
+• [RECIPIENT NAME] - Contact name at the target organization
+• [APPLICABLE INDUSTRY STANDARD(S)] - Relevant compliance frameworks (e.g., PCI-DSS, SOC 2, HIPAA, GDPR)
+• [FINDING SUMMARY] - 1-2 sentence summary of each RESILIENCE finding and its impact
+• [SDK NAME] - Name of any fraud/device fingerprinting SDK found (if applicable)
+• [NUMBER] - Total class count from decompilation statistics
+• [YOUR NAME], [YOUR TITLE], [YOUR EMAIL], [YOUR PHONE] - Your contact information
+
+CUSTOMIZATION GUIDELINES:
+• Include only RESILIENCE controls where gaps were identified
+• Remove any RESILIENCE bullet points that passed assessment (scored 7+/10)
+• Adjust industry standards based on the target organization's sector:
+  - Banking/Finance: PCI-DSS, SOC 2, GLBA
+  - Healthcare: HIPAA, HITRUST
+  - General: GDPR, SOC 2
+• Keep finding summaries concise (1-2 sentences) focusing on business impact
+• Maintain professional, consultative tone - avoid overly technical jargon
+
+SOURCE DATA:
+Pull information from the completed SECURITY_ASSESSMENT_REPORT.md, specifically:
+• Executive Summary section for overall findings
+• OWASP MASVS-RESILIENCE Controls Assessment table for scores
+• Individual finding descriptions for impact summaries
+• Compliance Impact section for applicable standards
