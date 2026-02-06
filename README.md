@@ -55,30 +55,44 @@ This exemplar repository provides:
 ```
 mobile-security-framework/
 ├── analysis-guides/       # OWASP MASVS enhanced guides and workflow
-│   ├── ASSESSMENT_WORKFLOW.md
-│   ├── MASVS-RESILIENCE-1-enhanced.md
-│   ├── MASVS-RESILIENCE-2-enhanced.md
-│   ├── MASVS-RESILIENCE-3-enhanced.md
-│   ├── MASVS-RESILIENCE-4-enhanced.md
-│   └── OWASP_MASVS_MAPPING.md
+│   ├── ASSESSMENT_WORKFLOW.md          # Step-by-step assessment methodology
+│   ├── MASVS-RESILIENCE-1-enhanced.md  # Root/Jailbreak Detection deep-dive
+│   ├── MASVS-RESILIENCE-2-enhanced.md  # Code Obfuscation deep-dive
+│   ├── MASVS-RESILIENCE-3-enhanced.md  # Anti-Debugging deep-dive
+│   ├── MASVS-RESILIENCE-4-enhanced.md  # Tamper Detection deep-dive
+│   ├── OWASP_MASVS_MAPPING.md          # MASVS v2.0 control reference
+│   ├── PROMPT_TEMPLATE.md              # AI prompt templates
+│   ├── QUICK_REFERENCE_COMMANDS.md     # Common analysis commands
+│   └── sanitize_guides.py              # Script to remove sensitive content
 ├── templates/             # Report and documentation templates
-│   ├── findings/          # Specific types of findings templates (e.g. hardcoded credentials)
-│   ├── masvs/            # MASVS compliance templates
-│   └── email/            # Email summary templates
+│   ├── REPORT_TEMPLATE.md              # Main security assessment report
+│   ├── COMPARATIVE_TEMPLATE.md         # Before/after analysis report
+│   ├── findings/                       # Individual finding templates
+│   │   └── hardcoded-credentials.md    # Example finding template
+│   ├── masvs/                          # MASVS compliance templates
+│   │   └── RESILIENCE_CONTROLS_MAPPING.md
+│   └── email/                          # Email summary templates
+│       └── assessment_results_email_summary.txt
 ├── tools/                 # Analysis automation and utility scripts
-│   ├── create_new_assessment.sh
-│   ├── quick-scan.sh
-│   ├── decompile.sh
-│   └── generate-report.py
+│   ├── create_new_assessment.sh        # Create new assessment from exemplar
+│   ├── check-dependencies.sh           # Verify required tools installed
+│   ├── decompile.sh                    # APK/IPA decompilation wrapper
+│   ├── quick-scan.sh                   # Fast security scan
+│   └── search-credentials.sh           # Find hardcoded secrets
 ├── docs/                  # Additional documentation
-│   ├── FAQ.md
-│   └── TROUBLESHOOTING.md
+│   ├── FAQ.md                          # Frequently asked questions
+│   └── TROUBLESHOOTING.md              # Common issues and solutions
 ├── apk/                   # [EMPTY] Placeholder for APK/IPA files
 ├── decompiled/            # [EMPTY] Placeholder for decompiled source
 ├── output/                # [EMPTY] Placeholder for analysis outputs
 ├── assessment-resources/  # [EMPTY] Placeholder for screenshots/evidence
+├── .claude/               # Claude Code configuration
+├── .claude_instructions   # Claude Code project instructions
+├── .gitignore             # Git ignore patterns
+├── CONTRIBUTING.md        # Contribution guidelines
 ├── GETTING_STARTED.md     # Setup and assessment guide
 ├── CLAUDE.md              # AI assistant guidance
+├── LICENSE                # Repository license
 └── README.md              # This file
 ```
 
